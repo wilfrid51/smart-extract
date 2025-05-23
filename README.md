@@ -1,6 +1,5 @@
-Here's your updated markdown documentation with **"SmartTextExtractor AI"** replacing all instances of **"DocuLingua Pro"**:
 
-````markdown
+
 # SmartTextExtractor AI - AI Document Translator
 
 ![SmartTextExtractor AI Logo](/static/logo.png)
@@ -54,7 +53,7 @@ SmartTextExtractor AI is an advanced document translation platform powered by Ge
 
 ## Project Structure
 
-```
+
 smarttextextractor-ai/
 ├── static/
 │   ├── styles.css       # Frontend styles
