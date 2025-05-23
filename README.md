@@ -50,7 +50,7 @@ SmartTextExtractor AI is an advanced document translation platform powered by Ge
    ```env
    GEMINI_API_KEY="your_api_key_here"
    ```
-
+  ```
 ## Project Structure
 
 
