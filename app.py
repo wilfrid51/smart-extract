@@ -9,14 +9,16 @@ from datetime import datetime
 from io import BytesIO
 import time
 import re
+import os
 
+load_dotenv()
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['MAX_CONTENT_LENGTH'] = 50 * 1024 * 1024
 app.config['ALLOWED_EXTENSIONS'] = {'pdf', 'png', 'jpg', 'jpeg'}
 
-# Configure Gemini API
-GEMINI_API_KEY = "AIzaSyA1R1EOX2ZR-NpASuRb_uMtImgFmEWuXdY"
+os.getenv("GEMINI_API_KEY")
+
 genai.configure(api_key=GEMINI_API_KEY)
 
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
