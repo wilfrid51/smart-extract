@@ -142,10 +142,7 @@ This project is licensed under the MIT License.
 
 For support or questions, please contact:
 
-* Email: [support@smarttextextractor.com](Deepak.B.in@outlook.com)
-* GitHub: [github.com/yourusername]([https://github.com/yourusername](https://github.com/deepak5256))
+* Email:(Deepak.B.in@outlook.com)
+* GitHub: (https://github.com/deepak5256))
 
-```
 
-Let me know if you want the branding to also update image filenames (like `logo.png`) or domain/email details.
-```
