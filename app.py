@@ -18,7 +18,6 @@ app.config['MAX_CONTENT_LENGTH'] = 50 * 1024 * 1024
 app.config['ALLOWED_EXTENSIONS'] = {'pdf', 'png', 'jpg', 'jpeg'}
 
 os.getenv("GEMINI_API_KEY")
-
 genai.configure(api_key=GEMINI_API_KEY)
 
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
