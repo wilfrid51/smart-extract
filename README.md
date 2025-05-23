@@ -30,7 +30,7 @@ SmartTextExtractor AI is an advanced document translation platform powered by Ge
    ```bash
    git clone https://github.com/yourusername/smarttextextractor-ai.git
    cd smarttextextractor-ai
-````
+
 
 2. Create and activate a virtual environment:
 
