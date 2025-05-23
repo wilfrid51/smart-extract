@@ -28,7 +28,7 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/smarttextextractor-ai.git
+   git clone https://github.com/deepak5256/SmartTextExtractor-AI.git
    cd smarttextextractor-ai
 
 
