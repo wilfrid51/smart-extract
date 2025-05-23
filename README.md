@@ -1,19 +1,19 @@
 
 
-# SmartTextExtractor AI - AI Document Translator
+# SmartTextExtractor AI - Handwritten and Printed Text Extraction Tool
 
 ![SmartTextExtractor AI Logo](/static/logo.png)
 
-SmartTextExtractor AI is an advanced document translation platform powered by Gemini AI that extracts, translates, and analyzes text from documents with high accuracy.
+**SmartTextExtractor AI** is an intelligent document processing platform powered by Gemini AI. It specializes in extracting handwritten and printed text from scanned documents and images, with support for multilingual translation and contextual explanation as additional features.
 
 ## Features
 
-- **Text Extraction**: Extract text from PDFs and images (PNG, JPG, JPEG)
-- **Multilingual Translation**: Translate between multiple languages
-- **Contextual Analysis**: Get detailed explanations of extracted text
-- **Format Preservation**: Maintain original document formatting
-- **Accuracy Metrics**: Visual representation of extraction accuracy
-- **Export Options**: Save results as TXT or PDF
+- **Handwritten & Printed Text Extraction**: Extracts high-accuracy text from scanned PDFs and images (PNG, JPG, JPEG)
+- **Multilingual Translation (Optional)**: Translate extracted text into multiple languages
+- **Contextual Analysis**: Get AI-powered explanations of extracted content
+- **Format Preservation**: Maintains structure and formatting of original documents
+- **Accuracy Metrics**: Visual indicators of extraction quality
+- **Export Options**: Download results as TXT or PDF
 
 ## Prerequisites
 
