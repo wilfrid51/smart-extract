@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartText Extractor AI| AI Document Translator</title>
+    <link rel="icon" href="/static/logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Correct way -->
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <img src="/static/logo.png" alt="DocuLingua Logo" class="logo">
+                <span class="brand-name">SmartText<span>Extractor  </span> AI</span>
+            </div>
+            <div class="navbar-menu">
+                <a href="#features" class="nav-item">Features</a>
+                <a href="#about" class="nav-item">About</a>
+                <a href="#contact" class="nav-item">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>AI-Powered Document Text Extractor and Translater</h1>
+            <p class="subtitle">Extract, translate, and analyze documents with unmatched accuracy</p>
+        </div>
+    </section>
+
+    <!-- Main App Content -->
+    <main class="main-app">
+        <div class="container">
+            <div class="panels-grid">
+                <!-- Input Panel -->
+                <div class="panel input-panel">
+                    <div class="panel-header">
+                        <h2 class="panel-title">
+                            <i class="fas fa-file-upload"></i>
+                            Document Input
+                        </h2>
+                    </div>
+                    <div class="panel-body">
+                        <div id="dropZone" class="drop-zone">
+                            <i class="fas fa-cloud-upload-alt drop-zone-icon"></i>
+                            <p class="drop-zone-text">Drag & drop your document here</p>
+                            <p class="drop-zone-subtext">or</p>
+                            <button id="browseBtn" class="btn btn-primary">
+                                <i class="fas fa-folder-open"></i> Browse Files
+                            </button>
+                            <input type="file" id="fileInput" class="file-input" accept=".pdf,.png,.jpg,.jpeg">
+                            <p class="drop-zone-subtext">Supported formats: PDF, PNG, JPG, JPEG</p>
+                        </div>
+                        
+                        <div id="accuracyMeter" class="accuracy-meter">
+                            <div class="accuracy-label">
+                                <span>Extraction Accuracy:</span>
+                                <span id="accuracyValue">0%</span>
+                            </div>
+                            <div class="accuracy-bar">
+                                <div id="accuracyFill" class="accuracy-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="targetLanguage" class="form-label">Translate to:</label>
+                            <select id="targetLanguage" class="form-select">
+    <option value="English">English</option>                            
+    <option value="Afrikaans">Afrikaans</option>
+    <option value="Albanian">Albanian</option>
+    <option value="Amharic">Amharic</option>
+    <option value="Arabic">Arabic</option>
+    <option value="Armenian">Armenian</option>
+    <option value="Azerbaijani">Azerbaijani</option>
+    <option value="Basque">Basque</option>
+    <option value="Belarusian">Belarusian</option>
+    <option value="Bengali">Bengali</option>
+    <option value="Bosnian">Bosnian</option>
+    <option value="Bulgarian">Bulgarian</option>
+    <option value="Catalan">Catalan</option>
+    <option value="Cebuano">Cebuano</option>
+    <option value="Chinese (Simplified)">Chinese (Simplified)</option>
+    <option value="Chinese (Traditional)">Chinese (Traditional)</option>
+    <option value="Corsican">Corsican</option>
+    <option value="Croatian">Croatian</option>
+    <option value="Czech">Czech</option>
+    <option value="Danish">Danish</option>
+    <option value="Dutch">Dutch</option>
+    
+    <option value="Esperanto">Esperanto</option>
+    <option value="Estonian">Estonian</option>
+    <option value="Finnish">Finnish</option>
+    <option value="French">French</option>
+    <option value="Frisian">Frisian</option>
+    <option value="Galician">Galician</option>
+    <option value="Georgian">Georgian</option>
+    <option value="German">German</option>
+    <option value="Greek">Greek</option>
+    <option value="Gujarati">Gujarati</option>
+    <option value="Haitian Creole">Haitian Creole</option>
+    <option value="Hausa">Hausa</option>
+    <option value="Hawaiian">Hawaiian</option>
+    <option value="Hebrew">Hebrew</option>
+    <option value="Hindi">Hindi</option>
+    <option value="Hmong">Hmong</option>
+    <option value="Hungarian">Hungarian</option>
+    <option value="Icelandic">Icelandic</option>
+    <option value="Igbo">Igbo</option>
+    <option value="Indonesian">Indonesian</option>
+    <option value="Irish">Irish</option>
+    <option value="Italian">Italian</option>
+    <option value="Japanese">Japanese</option>
+    <option value="Javanese">Javanese</option>
+    <option value="Kannada">Kannada</option>
+    <option value="Kazakh">Kazakh</option>
+    <option value="Khmer">Khmer</option>
+    <option value="Kinyarwanda">Kinyarwanda</option>
+    <option value="Korean">Korean</option>
+    <option value="Kurdish">Kurdish</option>
+    <option value="Kyrgyz">Kyrgyz</option>
+    <option value="Lao">Lao</option>
+    <option value="Latin">Latin</option>
+    <option value="Latvian">Latvian</option>
+    <option value="Lithuanian">Lithuanian</option>
+    <option value="Luxembourgish">Luxembourgish</option>
+    <option value="Macedonian">Macedonian</option>
+    <option value="Malagasy">Malagasy</option>
+    <option value="Malay">Malay</option>
+    <option value="Malayalam">Malayalam</option>
+    <option value="Maltese">Maltese</option>
+    <option value="Maori">Maori</option>
+    <option value="Marathi">Marathi</option>
+    <option value="Mongolian">Mongolian</option>
+    <option value="Myanmar (Burmese)">Myanmar (Burmese)</option>
+    <option value="Nepali">Nepali</option>
+    <option value="Norwegian">Norwegian</option>
+    <option value="Nyanja">Nyanja</option>
+    <option value="Odia (Oriya)">Odia (Oriya)</option>
+    <option value="Pashto">Pashto</option>
+    <option value="Persian">Persian</option>
+    <option value="Polish">Polish</option>
+    <option value="Portuguese">Portuguese</option>
+    <option value="Punjabi">Punjabi</option>
+    <option value="Romanian">Romanian</option>
+    <option value="Russian">Russian</option>
+    <option value="Samoan">Samoan</option>
+    <option value="Scots Gaelic">Scots Gaelic</option>
+    <option value="Serbian">Serbian</option>
+    <option value="Sesotho">Sesotho</option>
+    <option value="Shona">Shona</option>
+    <option value="Sindhi">Sindhi</option>
+    <option value="Sinhala">Sinhala</option>
+    <option value="Slovak">Slovak</option>
+    <option value="Slovenian">Slovenian</option>
+    <option value="Somali">Somali</option>
+    <option value="Spanish">Spanish</option>
+    <option value="Sundanese">Sundanese</option>
+    <option value="Swahili">Swahili</option>
+    <option value="Swedish">Swedish</option>
+    <option value="Tagalog (Filipino)">Tagalog (Filipino)</option>
+    <option value="Tajik">Tajik</option>
+    <option value="Tamil">Tamil</option>
+    <option value="Tatar">Tatar</option>
+    <option value="Telugu">Telugu</option>
+    <option value="Thai">Thai</option>
+    <option value="Turkish">Turkish</option>
+    <option value="Turkmen">Turkmen</option>
+    <option value="Ukrainian">Ukrainian</option>
+    <option value="Urdu">Urdu</option>
+    <option value="Uyghur">Uyghur</option>
+    <option value="Uzbek">Uzbek</option>
+    <option value="Vietnamese">Vietnamese</option>
+    <option value="Welsh">Welsh</option>
+    <option value="Xhosa">Xhosa</option>
+    <option value="Yiddish">Yiddish</option>
+    <option value="Yoruba">Yoruba</option>
+    <option value="Zulu">Zulu</option>
+</select>
+
+                           
+                        </div>
+                        
+                        <div class="btn-group">
+                            <button id="extractBtn" class="btn btn-primary" disabled>
+                                <i class="fas fa-extract"></i> Extract Text
+                            </button>
+                            <button id="translateBtn" class="btn btn-success" disabled>
+                                <i class="fas fa-language"></i> Click here to Translate
+                            </button>
+                            <button id="explainBtn" class="btn btn-info" disabled>
+                                <i class="fas fa-info-circle"></i> Explain
+                            </button>
+                        </div>
+                        
+                        <div id="status1" class="status"></div>
+                    </div>
+                </div>
+                
+                <!-- Output Panel -->
+                <div class="panel output-panel">
+                    <div class="panel-header">
+                        <h2 class="panel-title">
+                            <i class="fas fa-file-alt"></i>
+                            Results
+                        </h2>
+                        <div>
+                            <button id="copyBtn" class="btn btn-secondary btn-sm" disabled>
+                                <i class="far fa-copy"></i> Copy
+                            </button>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="tabs">
+                            <div class="tab active" data-tab="text">Text</div>
+                            <div class="tab" data-tab="explanation">Explanation</div>
+                        </div>
+                        
+                        <div id="textTab" class="tab-content active">
+                            <textarea id="resultText" class="textarea" placeholder="Extracted and translated text will appear here..." readonly></textarea>
+                        </div>
+                        
+                        <div id="explanationTab" class="tab-content">
+                            <textarea id="explanationText" class="textarea" placeholder="Detailed explanation will appear here..." readonly></textarea>
+                        </div>
+                        
+                        <div class="action-buttons">
+                            <div>
+                                <button id="exportTxtBtn" class="btn btn-secondary">
+                                    <i class="fas fa-file-alt"></i> Export as TXT
+                                </button>
+                                <!--button id="exportPdfBtn" class="btn btn-secondary">
+                                    <i class="fas fa-file-pdf"></i> Export as PDF
+                                </button-->
+                            </div>
+                            <button id="clearBtn" class="btn btn-danger">
+                                <i class="fas fa-trash-alt"></i> Clear All
+                            </button>
+                        </div>
+                        
+                        <div id="status2" class="status"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2 class="section-title">Advanced Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>Precision Extraction</h3>
+                    <p>Our AI extracts text with industry-leading accuracy, even from complex documents and images.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Multilingual Support</h3>
+                    <p>Translate documents between multiple languages while preserving formatting and meaning.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Contextual Analysis</h3>
+                    <p>Get detailed explanations of complex text with our advanced AI comprehension.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About SmartText Extractor AI</h2>
+                    <p>SmartText Extractor AI is a cutting-edge document translation platform powered by Gemini AI technology. Our mission is to break down language barriers and make document processing effortless for professionals across industries.</p>
+                    <p>With advanced OCR capabilities and contextual understanding, we deliver accurate translations while preserving the original document structure and formatting.</p>
+                </div>
+                <div class="about-image">
+                    <img src="/static/logo.png" alt="About DocuLingua">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">  
+                    <!--img src="/static/logo.png" alt="DocuLingua Logo" class="footer-logo"-->
+                    <span class="brand-name">SmartText<span>Extractor</span> AI</span>
+                </div>
+                <div class="footer-info">
+                    <div class="info-section">
+                        <h4>Company</h4>
+                        <!--p>DocuLingua Technologies</p-->
+                        <p>Innovating document processing since 2023</p>
+                    </div>
+                    <div class="info-section">
+                        <h4>Technology</h4>
+                        <p>Powered by Gemini AI</p>
+                        <p>Advanced OCR and NLP</p>
+                    </div>
+                    <div class="info-section">
+                        <h4>Contact</h4>
+                        <p>grokwebpage.com</p>
+                        <!--p>+1 (555) 123-4567</p-->
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SmartText Extractor AI. All rights reserved.</p>
+                <!--p>Designed for professionals by professionals</p-->
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
