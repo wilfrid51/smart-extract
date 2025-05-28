@@ -28,7 +28,7 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/deepak5256/SmartTextExtractor-AI.git
+   git clone https://github.com/wilfrid51/smart-extract.git
    cd smarttextextractor-ai
 
 
@@ -142,7 +142,5 @@ This project is licensed under the MIT License.
 
 For support or questions, please contact:
 
-* Email:(Deepak.B.in@outlook.com)
-* GitHub: (https://github.com/deepak5256))
-
-
+* Email:(wilfrid51bergnaumuab@hotmail.com)
+* GitHub: (https://github.com/wilfrid51/smart-extract)
